@@ -1,0 +1,23 @@
+.home-head {
+  width: 100%;
+  background-color: aquamarine;
+  height: 300px;
+  overflow: hidden;
+  padding: 0;
+}
+.home-img {
+  width: 100%;
+  max-height: 300px;
+}
+.chart-bg {
+  width: 100%;
+  max-height: 400px;
+  background-image: url("https://img.alicdn.com/tfs/TB1wKX6SFXXXXXuapXXXXXXXXXX-1920-895.jpg");
+  background-repeat:  no-repeat no-repeat;
+  background-position: 50% 50%;
+  position: relative;
+}
+.chart {
+  background-color: white;
+  float: left;
+}
