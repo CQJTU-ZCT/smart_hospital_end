@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
 
 import * as echarts from 'echarts';
 
@@ -7,13 +7,43 @@ import * as echarts from 'echarts';
   templateUrl: './chat-doctor.component.html',
   styleUrls: ['./chat-doctor.component.css']
 })
-export class ChatDoctorComponent implements OnInit {
-
+export class ChatDoctorComponent implements OnInit, AfterViewInit {
+  @Input() title: string;
+  @Input() subtitle: string;
+  @Input() legend: any;
+  @Input() data: string;
+  @Input() chartId: string;
   constructor() { }
 
   ngOnInit() {
-    const chart = echarts.init(document.getElementById('chart'));
+    console.log('chart component initialized');
+
+  }
+
+  ngAfterViewInit() {
+    const chart = echarts.init(document.getElementById(this.chartId));
     const option = {
+      color: [
+        '#36C',
+        '#109618',
+        '#909',
+        '#0099C6',
+        '#D47',
+        '#6A0',
+        '#B82E2E',
+        '#316395',
+        '#F90',
+        '#949',
+        '#2A9',
+        '#AA1',
+        '#63C',
+        '#E67300',
+        '#651067',
+        '#329262',
+        '#5574A6',
+        '#DC3912'
+      ],
+      animation: true,
       tooltip: {
         trigger: 'item',
         formatter: '{a} <br/>{b}: {c}人 ({d}%)'
@@ -21,14 +51,18 @@ export class ChatDoctorComponent implements OnInit {
       legend: {
         orient: 'horizontal',
         x: 'center',
-        data: ['已预约就诊人员', '已处理预约']
+        data: JSON.parse(this.legend),
+        textStyle: {
+          color: '#fff'
+        }
       },
       series: [
         {
-          name: '就诊人员流量分析',
+          name: this.title,
           type: 'pie',
           radius: ['50%', '70%'],
           avoidLabelOverlap: false,
+          animationDelay: 500,
           label: {
             normal: {
               show: false,
@@ -37,7 +71,7 @@ export class ChatDoctorComponent implements OnInit {
             emphasis: {
               show: true,
               textStyle: {
-                fontSize: '25',
+                fontSize: '20',
                 fontWeight: 'bold'
               }
             }
@@ -47,10 +81,7 @@ export class ChatDoctorComponent implements OnInit {
               show: false
             }
           },
-          data:[
-            {value: 26, name: '已预约就诊人员'},
-            {value: 10, name: '已处理预约'}
-          ]
+          data: JSON.parse(this.data)
         }
       ]
     };

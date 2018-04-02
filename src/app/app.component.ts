@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
   constructor() {
     require('../../node_modules/jquery/dist/jquery.js');
     require('../../node_modules/popper.js/dist/popper.js');

@@ -8,17 +8,21 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100 home-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522591350888&di=481b28937e9acccf30eb044a173d63f0&imgtype=0&src=http%3A%2F%2Fwww.premier-capital.com%2FKindEditor%2Fasp.net%2F..%2Fattached%2Fimage%2F20151125%2F20151125205725_3784.jpg" alt="First slide">
+        <img class="d-block w-100 home-img"
+             src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522591350888&di=481b28937e9acccf30eb044a173d63f0&imgtype=0&src=http%3A%2F%2Fwww.premier-capital.com%2FKindEditor%2Fasp.net%2F..%2Fattached%2Fimage%2F20151125%2F20151125205725_3784.jpg"
+             alt="First slide">
         <div class="carousel-caption d-none d-md-block">
           <h5>新桥医院</h5>
           <p>新桥医院</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100 home-img" src="https://huyaimg.msstatic.com/cdnimage/internationMatch/phpnK9FdS1515997038.jpg" alt="Second slide">
+        <img class="d-block w-100 home-img"
+             src="https://huyaimg.msstatic.com/cdnimage/internationMatch/phpnK9FdS1515997038.jpg" alt="Second slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100 home-img" src="https://huyaimg.msstatic.com/cdnimage/internationMatch/phpnK9FdS1515997038.jpg" alt="Third slide">
+        <img class="d-block w-100 home-img"
+             src="https://huyaimg.msstatic.com/cdnimage/internationMatch/phpnK9FdS1515997038.jpg" alt="Third slide">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -32,6 +36,23 @@
   </div>
 </div>
 <div class="container-fluid chart-bg">
-  <app-chat-doctor class="chart"></app-chat-doctor>
-  <app-chat-doctor class="chart"></app-chat-doctor>
+  <div class="container chart-div">
+    <app-chat-doctor class="chart"
+                     chartId="chart1"
+                     title="值班医生分析"
+                     subtitle="在班医生189人"
+                     legend="{{legend1Str}}"
+                     data="{{data1Str}}">
+    </app-chat-doctor>
+    <app-chat-doctor class="chart"
+                     chartId="chart2"
+                     title="救护车统计"
+                     subtitle="可用救护车23辆"
+                     legend="{{legend2Str}}"
+                     data="{{data2Str}}">
+    </app-chat-doctor>
+  </div>
+</div>
+<div class="container-fluid chart-bg">
+
 </div>

@@ -1,4 +1,33 @@
-.chart-half {
-  width: 50%;
+.chart-container {
   height: 400px;
+  width: 100%;
+  padding-top: 10px;
+}
+.chart-header {
+  width: 100%;
+  height: 60px;
+}
+.chart-title {
+  height: 40px;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bolder;
+  margin: 0;
+}
+.chart-subtitle {
+  height: 20px;
+  width: 100%;
+  color: lightgrey;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+}
+.chart-half {
+  width: 100%;
+  height: 340px;
+  text-align: center;
 }
