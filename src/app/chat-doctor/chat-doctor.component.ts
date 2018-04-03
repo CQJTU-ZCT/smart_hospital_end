@@ -24,8 +24,8 @@ export class ChatDoctorComponent implements OnInit, AfterViewInit {
     const chart = echarts.init(document.getElementById(this.chartId));
     const option = {
       color: [
-        '#36C',
         '#109618',
+        '#2A9',
         '#909',
         '#0099C6',
         '#D47',

@@ -1,33 +1,41 @@
 .chart-container {
-  height: 400px;
+  height: 100%;
   width: 100%;
   padding-top: 10px;
+  position:relative;
 }
 .chart-header {
-  width: 100%;
-  height: 60px;
+  width: 40%;
+  height: 100%;
+  float: left;
+  position: relative;
 }
 .chart-title {
   height: 40px;
   width: 100%;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 40px;
   text-align: center;
   font-weight: bolder;
   margin: 0;
+  position: absolute;
+  top: 30%;
 }
 .chart-subtitle {
   height: 20px;
   width: 100%;
   color: lightgrey;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 20px;
   text-align: center;
   margin: 0;
+  position: absolute;
+  top: 50%;
 }
 .chart-half {
-  width: 100%;
-  height: 340px;
+  width: 60%;
+  height: 100%;
   text-align: center;
+  float: left;
 }

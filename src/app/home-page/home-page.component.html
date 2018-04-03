@@ -39,14 +39,14 @@
   <div class="container chart-div">
     <app-chat-doctor class="chart"
                      chartId="chart1"
-                     title="值班医生分析"
+                     title="当班医生监控"
                      subtitle="在班医生189人"
                      legend="{{legend1Str}}"
                      data="{{data1Str}}">
     </app-chat-doctor>
     <app-chat-doctor class="chart"
                      chartId="chart2"
-                     title="救护车统计"
+                     title="在班救护车监控"
                      subtitle="可用救护车23辆"
                      legend="{{legend2Str}}"
                      data="{{data2Str}}">
@@ -56,3 +56,8 @@
 <div class="container-fluid chart-bg">
 
 </div>
+<div class="container-fluid in-time-chart">
+  <app-in-time-chart></app-in-time-chart>
+</div>
+
+<app-footer></app-footer>
