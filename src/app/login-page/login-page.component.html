@@ -23,13 +23,15 @@
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="输入密码"
                    aria-describedby="pawHelp">
             <small id="pawHelp" class="form-text text-muted">密码必须大于8位,且至少保护1个数字,1个小写字母,1个大写字母.</small>
-            <small class="form-text text-muted"><a href="#" (click)="toFindPawd()">忘记密码？</a></small>
+            <small class="form-text text-muted"><a  routerLink="/find" routerLinkActive="active">忘记密码？</a>
+            </small>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-block">登录</button>
+          <button type="submit" class="btn btn-primary btn-block" (click)="submit()">登录</button>
         </form>
       </div>
     </div>
   </div>
-
+  <app-footer-light class="footer-light"></app-footer-light>
 </div>
+

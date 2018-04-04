@@ -12,14 +12,10 @@ export class LoginPageComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-
-  toFindPawd() {
-    console.log('clicked');
-    this.router.navigate(['find']);
-    return false;
+  submit() {
+    this.router.navigate(['home']);
   }
 
 }

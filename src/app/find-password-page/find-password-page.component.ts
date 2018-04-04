@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-find-password-page',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FindPasswordPageComponent implements OnInit {
 
-  constructor() { }
+  username: string;
+  nameValid: boolean;
+  validStr: string;
+  constructor(
+    private router: Router
+  ) {
+    this.username = '程飘';
+    this.nameValid = true;
+  }
 
   ngOnInit() {
+  }
+
+  submit() {
+    if (this.username === '') {
+      this.nameValid = false;
+      this.validStr = '用户名不能为空';
+    } else {
+      this.nameValid = true;
+      this.router.navigate(['tip']);
+    }
+    console.log(this.username);
   }
 
 }

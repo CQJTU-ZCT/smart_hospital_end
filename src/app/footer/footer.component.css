@@ -1,9 +1,10 @@
 footer {
-  height: 200px;
-  background-color: #252B46;
   color: white;
   padding: 10px;
+  background-color: #252B46;
 }
 footer p {
   text-align: center;
+  margin: 0;
 }
+
