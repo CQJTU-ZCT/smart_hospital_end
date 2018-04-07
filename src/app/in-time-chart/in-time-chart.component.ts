@@ -28,6 +28,13 @@ export class InTimeChartComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     const chart = echarts.init(document.getElementById('in-time-chart'));
     const option = {
+      title: {
+        text: '服务情况实时监控',
+        textStyle: {
+          color: '#fff'
+        },
+        x: 'center'
+      },
       color: [
         '#36C',
         '#109618',
@@ -60,6 +67,7 @@ export class InTimeChartComponent implements OnInit, AfterViewInit {
         right: '20%'
       },
       legend: {
+        top: 30,
         data: ['已预约人数', '已处理人数', '空闲医生人数', '空闲医生-待处理就诊差额'],
         textStyle: {
           color: '#fff'
@@ -104,7 +112,8 @@ export class InTimeChartComponent implements OnInit, AfterViewInit {
         {
           show: true,
           start: 0,
-          end: 100
+          end: 100,
+          type: 'inside'
         },
         {
           dataBackground: {

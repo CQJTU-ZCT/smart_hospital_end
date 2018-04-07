@@ -1,6 +1,5 @@
 .contact-div {
   width: 40%;
-  height: 300px;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: #ccc 0 0 10px;
@@ -25,4 +24,18 @@
 }
 .contact-info {
   padding: 10px;
+}
+.contact-content {
+  max-height: 300px;
+  min-height: 200px;
+}
+.btn-submit-div {
+  position: relative;
+  height: 60px;
+}
+.btn-submit {
+  float: right;
+  margin-top: 20px;
+  position: absolute;
+  right: 0;
 }

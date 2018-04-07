@@ -17,6 +17,15 @@ import { EmailTipComponent } from './email-tip/email-tip.component';
 import { ResetPawdComponent } from './reset-pawd/reset-pawd.component';
 import { FooterLightComponent } from './footer-light/footer-light.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { DoctorManageComponent } from './doctor-manage/doctor-manage.component';
+import { CarManageComponent } from './car-manage/car-manage.component';
+import { PaySysComponent } from './pay-sys/pay-sys.component';
+import { UserCenterComponent } from './user-center/user-center.component';
+import { NavVerticalComponent } from './nav-vertical/nav-vertical.component';
+import { ListViwComponent } from './list-viw/list-viw.component';
+import {DoctorService} from "./doctor.service";
+import { DoctorInfoComponent } from './doctor-info/doctor-info.component';
+import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 
 const appRoutes: Routes = [
   { path: 'find', component: FindPasswordPageComponent },
@@ -25,6 +34,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'home', component: HomePageComponent },
   { path: 'contact', component: ContactPageComponent },
+  { path: 'doctor', component: DoctorManageComponent },
   { path: '**', component: ErrorPageComponent }
 ];
 
@@ -42,7 +52,15 @@ const appRoutes: Routes = [
     EmailTipComponent,
     ResetPawdComponent,
     FooterLightComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    DoctorManageComponent,
+    CarManageComponent,
+    PaySysComponent,
+    UserCenterComponent,
+    NavVerticalComponent,
+    ListViwComponent,
+    DoctorInfoComponent,
+    AddDoctorComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -52,7 +70,7 @@ const appRoutes: Routes = [
     FormsModule,
     Select2Module
   ],
-  providers: [],
+  providers: [DoctorService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
