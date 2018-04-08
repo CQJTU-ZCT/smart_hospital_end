@@ -26,6 +26,7 @@ import { ListViwComponent } from './list-viw/list-viw.component';
 import {DoctorService} from "./doctor.service";
 import { DoctorInfoComponent } from './doctor-info/doctor-info.component';
 import { AddDoctorComponent } from './add-doctor/add-doctor.component';
+import { EventService } from './event.service';
 
 const appRoutes: Routes = [
   { path: 'find', component: FindPasswordPageComponent },
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'doctor', component: DoctorManageComponent },
+  { path: 'add-doctor', component: AddDoctorComponent, outlet: 'aux' },
   { path: '**', component: ErrorPageComponent }
 ];
 
@@ -70,7 +72,7 @@ const appRoutes: Routes = [
     FormsModule,
     Select2Module
   ],
-  providers: [DoctorService],
+  providers: [DoctorService, EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

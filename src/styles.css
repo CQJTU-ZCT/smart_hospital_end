@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "~select2/dist/css/select2.css";
+@import "~animate.css/animate.css";
+@import "~select2-bootstrap-theme/dist/select2-bootstrap.css";
 
 /*stylish the scroll bar*/
 /*but there are something different between ie and webkit*/
@@ -59,4 +61,14 @@
   height: 100%;
   background-color: white;
   padding: 0;
+}
+
+.display {
+  display: block;
+  overflow: hidden;
+  height: 100%;
+}
+.dismiss {
+  display: none;
+  overflow: hidden;
 }

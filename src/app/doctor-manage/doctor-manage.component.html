@@ -5,14 +5,21 @@
       <app-nav-vertical></app-nav-vertical>
     </div>
     <div class="content-right">
-      <div class="content-doctor-list">
-        <app-list-viw></app-list-viw>
-      </div>
-      <div class="content-doctor-info">
-        <div class="doctor-card">
-          <app-doctor-info></app-doctor-info>
+      <div id="checkDoctor" class="display animated fadeIn">
+        <div class="content-doctor-list">
+          <app-list-viw></app-list-viw>
+        </div>
+        <div class="content-doctor-info">
+          <div class="doctor-card">
+            <app-doctor-info></app-doctor-info>
+          </div>
         </div>
       </div>
+
+      <div id="addDoctor" class="dismiss animated zoomIn" style="padding: 5px">
+        <app-add-doctor></app-add-doctor>
+      </div>
+
     </div>
 
   </div>

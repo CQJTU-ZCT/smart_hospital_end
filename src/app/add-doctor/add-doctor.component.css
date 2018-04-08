@@ -1,0 +1,15 @@
+.input-item-short {
+  max-width: 40%;
+}
+.input-label {
+  line-height: 38px;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-left: 15px;
+  margin-right: 5px;
+  margin-bottom: 0;
+}
+
+.select2 {
+  width: 150px !important;
+}
