@@ -3,6 +3,9 @@
 @import "~select2/dist/css/select2.css";
 @import "~animate.css/animate.css";
 @import "~select2-bootstrap-theme/dist/select2-bootstrap.css";
+@import "~handsontable/dist/handsontable.full.css";
+@import "~igniteui-angular/styles/igniteui-angular.css";
+
 
 /*stylish the scroll bar*/
 /*but there are something different between ie and webkit*/
@@ -71,4 +74,26 @@
 .dismiss {
   display: none;
   overflow: hidden;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('./assests/webfonts/materialdesign.woff2');
 }

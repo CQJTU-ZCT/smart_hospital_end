@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule} from '@angular/forms';
-import { Select2Module } from 'ng4-select2';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -23,11 +22,21 @@ import { PaySysComponent } from './pay-sys/pay-sys.component';
 import { UserCenterComponent } from './user-center/user-center.component';
 import { NavVerticalComponent } from './nav-vertical/nav-vertical.component';
 import { ListViwComponent } from './list-viw/list-viw.component';
-import {DoctorService} from "./doctor.service";
+import { DoctorService } from './doctor.service';
 import { DoctorInfoComponent } from './doctor-info/doctor-info.component';
 import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { EventService } from './event.service';
+import { GridviewComponent } from './gridview/gridview.component';
+import { GridviewService } from './gridview.service';
+import {IgxGridModule} from 'igniteui-angular/grid';
 
+declare var require: any;
+
+require('../../node_modules/jquery/dist/jquery.js');
+require('../../node_modules/popper.js/dist/popper.js');
+require('../../node_modules/bootstrap/dist/js/bootstrap.js');
+require('../../node_modules/select2/dist/js/select2.js');
+require('../../node_modules/handsontable/dist/handsontable.full.js');
 const appRoutes: Routes = [
   { path: 'find', component: FindPasswordPageComponent },
   { path: 'tip', component: EmailTipComponent },
@@ -37,6 +46,8 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactPageComponent },
   { path: 'doctor', component: DoctorManageComponent },
   { path: 'add-doctor', component: AddDoctorComponent, outlet: 'aux' },
+  { path: 'car', component: CarManageComponent },
+  { path: 'pay', component: PaySysComponent },
   { path: '**', component: ErrorPageComponent }
 ];
 
@@ -62,7 +73,8 @@ const appRoutes: Routes = [
     NavVerticalComponent,
     ListViwComponent,
     DoctorInfoComponent,
-    AddDoctorComponent
+    AddDoctorComponent,
+    GridviewComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -70,9 +82,9 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     FormsModule,
-    Select2Module
+    IgxGridModule.forRoot()
   ],
-  providers: [DoctorService, EventService],
+  providers: [DoctorService, EventService, GridviewService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

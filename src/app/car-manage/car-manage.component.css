@@ -1,0 +1,92 @@
+.car-container {
+  height: calc(100% - 100px);
+  overflow: hidden;
+  padding: 0;
+}
+.search-bar {
+  height: 40px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.select2 {
+  width: 200px !important;
+  height: 30px !important;
+  margin-top: 5px !important;
+
+}
+.car-info {
+  line-height: 40px;
+  margin-right: 20px;
+  font-size: 16px;
+  margin-left: 20px;
+}
+.map-container {
+  height: calc(100% - 125px);
+  width: 100%;
+  margin-top: 10px;
+  margin-right: 0;
+  margin-left: 0;
+}
+.add-car-btn {
+  margin-left: 150px;
+  right: 0;
+  height: 30px;
+  width: 100px;
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0;
+}
+.bar {
+  padding-left: 20px;
+  margin-top: 20px;
+}
+.add-container {
+  width: 40%;
+  left: 30%;
+  position: absolute;
+  margin-top: 20px;
+}
+.cell {
+  border: 1px solid #eee;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  background-color: transparent;
+}
+.table-head {
+  font-size: 16px;
+  font-weight: bold;
+}
+.act-item {
+  height: 25px;
+  width: 25px;
+  background-color: #007bff;
+  color: white;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 12px;
+  float: left;
+  margin-left: 5px;
+}
+
+.act-item:hover {
+  background-color: #1E90FF;
+  border: 1px solid salmon;
+}
+.act-item-disabled {
+  height: 25px;
+  width: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 12px;
+  float: left;
+  margin-left: 5px;
+  background-color: #ccc;
+  color: #999;
+}
+.car-row:hover {
+  background-color: #eeeeee;
+}

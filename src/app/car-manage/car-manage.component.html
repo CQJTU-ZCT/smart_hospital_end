@@ -1,3 +1,182 @@
-<p>
-  car-manage works!
-</p>
+<div class="container-fluid div-container">
+  <app-navbar></app-navbar>
+  <div class="container car-container display" id="car-monitor">
+    <div class="search-bar row">
+      <label class="car-info">共<label class="text-primary">23</label>辆救护车，
+        在勤<label class="text-danger">11</label>量，空闲<label class="text-success">12</label>辆</label>
+      <select class="select2">
+        <optgroup label="空闲">
+          <option>sdaw</option>
+          <option>sdaw</option>
+          <option>sdaw</option>
+        </optgroup>
+        <optgroup label="在勤">
+          <option>dsadasdsa</option>
+          <option>dsadasdsa</option>
+          <option>dsadasdsa</option>
+          <option>dsadasdsa</option>
+        </optgroup>
+      </select>
+      <button type="button" class="btn btn-outline-primary add-car-btn"
+              (click)="toAddCar()">录入新车辆
+      </button>
+      <button type="button" class="btn btn-outline-primary add-car-btn"
+              (click)="toManageCar()"
+              style="margin-left: 20px">管理车辆
+      </button>
+    </div>
+
+    <div class="map-container" id="bdmap">
+    </div>
+  </div>
+
+  <div class="container car-container animated fadeIn dismiss" id="add-car">
+    <div class="row bar">
+      <button type="button"
+              class="btn btn-outline-primary btn-sm"
+              (click)="back()"><i class="fas fa-angle-left"></i>返回
+      </button>
+    </div>
+    <hr>
+    <div class="add-container">
+      <form>
+        <div class="form-group">
+          <label for="carNumberInput">车牌号</label>
+          <input type="text" class="form-control" id="carNumberInput" aria-describedby="carInputHelp"
+                 placeholder="输入车牌号">
+          <small id="carInputHelp" class="form-text text-muted">请输入国内车牌号码</small>
+        </div>
+        <div class="form-group">
+          <label for="carBrandInput">救护车品牌</label>
+          <input type="text" class="form-control" id="carBrandInput" aria-describedby="carBrandInputHelp"
+                 placeholder="请输入品牌名称">
+          <small id="carBrandInputHelp" class="form-text text-muted">输入救护车品牌名称</small>
+        </div>
+        <div class="form-group">
+          <label for="carModelInput">救护车型号</label>
+          <input type="text" class="form-control" id="carModelInput" aria-describedby="carModelInputHelp"
+                 placeholder=" 请输入救护车型号">
+          <small id="carModelInputHelp" class="form-text text-muted">救护车的型号信息，如...</small>
+        </div>
+        <div class="form-group">
+          <label for="carPassengerLimitedInput">核载人数</label>
+          <input type="number" class="form-control" id="carPassengerLimitedInput"
+                 aria-describedby="carPassengerLimitedInputHelp"
+                 placeholder=" 请输入救护车荷载人数">
+          <small id="carPassengerLimitedInputHelp" class="form-text text-muted">请按照车管所核定人数严格填写</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">添加</button>
+      </form>
+    </div>
+  </div>
+  <div class="container car-container animated fadeIn dismiss" id="manage-car">
+    <div class="row bar">
+      <button type="button" (click)="back()" class="btn btn-outline-primary btn-sm"><i class="fas fa-angle-left"></i>返回
+      </button>
+    </div>
+    <hr>
+    <div class="alert alert-warning alert-dismissible animated fadeIn dismiss" role="alert">
+      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    </div>
+    <div class="container-fluid">
+      <div class="row table-head">
+        <div class="col-2 cell">
+          车牌
+        </div>
+        <div class="col-2 cell">
+          品牌
+        </div>
+        <div class="col-2 cell">
+          型号
+        </div>
+        <div class="col-2 cell">
+          荷载人数
+        </div>
+        <div class="col-4 cell">
+          操作
+        </div>
+      </div>
+      <div class="row car-row">
+        <input class="col-2 cell" value="渝A21231" disabled/>
+        <input class="col-2 cell" value="奔驰" disabled/>
+        <input class="col-2 cell" value="s-class233" disabled/>
+        <input class="col-2 cell" value="4" disabled/>
+        <div class="col-4 cell">
+          <div class="act-item fas fa-pencil-alt" data-toggle="tooltip"
+               data-placement="left" title="修改"
+               (click)="change($event)">
+          </div>
+          <div class="act-item fas fa-trash-alt" data-toggle="tooltip"
+               data-placement="left" title="删除">
+          </div>
+          <div class="act-item fas fa-check dismiss animated fadeIn" data-toggle="tooltip"
+               data-placement="left" title="提交修改"
+               (click)="submit($event)">
+          </div>
+        </div>
+      </div>
+      <div class="row car-row">
+        <input class="col-2 cell" value="渝A21231" disabled/>
+        <input class="col-2 cell" value="奔驰" disabled/>
+        <input class="col-2 cell" value="s-class233" disabled/>
+        <input class="col-2 cell" value="4" disabled/>
+        <div class="col-4 cell">
+          <div class="act-item fas fa-pencil-alt" data-toggle="tooltip"
+               data-placement="left" title="修改"
+               (click)="change($event)">
+          </div>
+          <div class="act-item fas fa-trash-alt" data-toggle="tooltip"
+               data-placement="left" title="删除">
+          </div>
+          <div class="act-item fas fa-check dismiss animated fadeIn" data-toggle="tooltip"
+               data-placement="left" title="提交修改"
+               (click)="submit($event)">
+          </div>
+        </div>
+      </div>
+      <div class="row car-row">
+        <input class="col-2 cell" value="渝A21231" disabled/>
+        <input class="col-2 cell" value="奔驰" disabled/>
+        <input class="col-2 cell" value="s-class233" disabled/>
+        <input class="col-2 cell" value="4" disabled/>
+        <div class="col-4 cell">
+          <div class="act-item fas fa-pencil-alt" data-toggle="tooltip"
+               data-placement="left" title="修改"
+               (click)="change($event)">
+          </div>
+          <div class="act-item fas fa-trash-alt" data-toggle="tooltip"
+               data-placement="left" title="删除">
+          </div>
+          <div class="act-item fas fa-check dismiss animated fadeIn" data-toggle="tooltip"
+               data-placement="left" title="提交修改"
+               (click)="submit($event)">
+          </div>
+        </div>
+      </div>
+      <div class="row car-row">
+        <input class="col-2 cell" value="渝A21231" disabled/>
+        <input class="col-2 cell" value="奔驰" disabled/>
+        <input class="col-2 cell" value="s-class233" disabled/>
+        <input class="col-2 cell" value="4" disabled/>
+        <div class="col-4 cell">
+          <div class="act-item fas fa-pencil-alt" data-toggle="tooltip"
+               data-placement="left" title="修改"
+               (click)="change($event)">
+          </div>
+          <div class="act-item fas fa-trash-alt" data-toggle="tooltip"
+               data-placement="left" title="删除">
+          </div>
+          <div class="act-item fas fa-check dismiss animated fadeIn" data-toggle="tooltip"
+               data-placement="left" title="提交修改"
+               (click)="submit($event)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid footer-container-dark">
+    <app-footer-light class="footer-dark footer-stacked"></app-footer-light>
+  </div>
+</div>
