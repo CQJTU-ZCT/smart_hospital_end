@@ -31,6 +31,7 @@
     "handsontable": "^0.38.1",
     "igniteui-angular": "^5.2.1",
     "jquery": "^3.3.1",
+    "markdown": "^0.5.0",
     "ng4-select2": "^1.0.0-beta.14",
     "npm": "^5.8.0",
     "popper.js": "^1.14.1",

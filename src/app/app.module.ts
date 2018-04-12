@@ -28,7 +28,8 @@ import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { EventService } from './event.service';
 import { GridviewComponent } from './gridview/gridview.component';
 import { GridviewService } from './gridview.service';
-import {IgxGridModule} from 'igniteui-angular/grid';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { HelpComponent } from './help/help.component';
 
 declare var require: any;
 
@@ -37,6 +38,7 @@ require('../../node_modules/popper.js/dist/popper.js');
 require('../../node_modules/bootstrap/dist/js/bootstrap.js');
 require('../../node_modules/select2/dist/js/select2.js');
 require('../../node_modules/handsontable/dist/handsontable.full.js');
+require('../../node_modules/markdown/lib/markdown.js');
 const appRoutes: Routes = [
   { path: 'find', component: FindPasswordPageComponent },
   { path: 'tip', component: EmailTipComponent },
@@ -48,6 +50,8 @@ const appRoutes: Routes = [
   { path: 'add-doctor', component: AddDoctorComponent, outlet: 'aux' },
   { path: 'car', component: CarManageComponent },
   { path: 'pay', component: PaySysComponent },
+  { path: 'about', component: AboutUsComponent },
+  { path: 'help', component: HelpComponent },
   { path: '**', component: ErrorPageComponent }
 ];
 
@@ -74,7 +78,9 @@ const appRoutes: Routes = [
     ListViwComponent,
     DoctorInfoComponent,
     AddDoctorComponent,
-    GridviewComponent
+    GridviewComponent,
+    AboutUsComponent,
+    HelpComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -82,7 +88,6 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     FormsModule,
-    IgxGridModule.forRoot()
   ],
   providers: [DoctorService, EventService, GridviewService],
   bootstrap: [AppComponent]
