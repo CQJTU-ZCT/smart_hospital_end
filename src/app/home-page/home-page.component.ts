@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ConfigService} from '../services/config.service';
 
 @Component({
   selector: 'app-home-page',
@@ -15,7 +16,12 @@ export class HomePageComponent implements OnInit {
   data1Str: string;
   data2Str: string;
 
-  constructor() {
+  navs: any;
+
+  constructor(
+    private config: ConfigService
+  ) {
+    this.navs = this.config.getDefaultNavPills();
   }
 
   ngOnInit() {

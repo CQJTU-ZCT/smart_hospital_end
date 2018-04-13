@@ -76,6 +76,7 @@ export class InTimeChartComponent implements OnInit, AfterViewInit {
       },
       xAxis: [
         {
+          boundaryGap: true,
           type: 'category',
           axisTick: {
             alignWithLabel: true

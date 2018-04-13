@@ -1,9 +1,10 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {Observable} from "rxjs/Observable";
 import {Subscription} from "rxjs/Subscription";
-import {DoctorService} from "../doctor.service";
-import {EventService} from '../event.service';
+import {DoctorService} from "../services/doctor.service";
+import {EventService} from '../services/event.service';
 import {Router} from '@angular/router';
+import {ConfigService} from '../services/config.service';
 
 @Component({
   selector: 'app-doctor-manage',
@@ -18,12 +19,14 @@ export class DoctorManageComponent implements OnInit, AfterViewInit {
 
   checkDoctorView: any;
   addDoctorView: any;
+  navs: any;
 
 
   constructor(
     private doctorService: DoctorService,
     private eventService: EventService,
-    private router: Router
+    private router: Router,
+    private config: ConfigService
   ) {
     this.subscription = this.doctorService.getMessage().subscribe(msg => {
       this.msg = msg;
@@ -34,6 +37,7 @@ export class DoctorManageComponent implements OnInit, AfterViewInit {
       console.log(value);
       this.listItemClickListener(value);
     });
+    this.navs = this.config.getDefaultNavPills();
   }
 
   ngOnInit() {}

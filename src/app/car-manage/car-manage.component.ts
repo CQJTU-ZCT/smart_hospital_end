@@ -2,6 +2,7 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 
 import * as $ from 'jquery';
 import {timer} from 'rxjs/observable/timer';
+import {ConfigService} from '../services/config.service';
 
 @Component({
   selector: 'app-car-manage',
@@ -9,10 +10,16 @@ import {timer} from 'rxjs/observable/timer';
   styleUrls: ['./car-manage.component.css']
 })
 export class CarManageComponent implements OnInit, AfterViewInit {
-
-  constructor() { }
-
   baiduMap: any;
+  navs: any;
+
+  constructor(
+    private config: ConfigService
+  ) {
+    this.navs = this.config.getDefaultNavPills();
+  }
+
+
 
 
   ngOnInit() {

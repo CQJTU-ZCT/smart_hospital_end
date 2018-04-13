@@ -10,6 +10,12 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   @Input()
   current: number;
 
+  @Input()
+  navPills: any;
+
+  @Input()
+  id: any;
+
   constructor() {
   }
 
@@ -18,9 +24,10 @@ export class NavbarComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     // init for bootstrap tooltip
-    console.log($('[data-toggle="tooltip"]').length);
     $('[data-toggle="tooltip"]').tooltip();
-    const navs = $('#navbar').children();
+    console.log(this.current);
+    const navs = document.getElementById(this.id).children;
+    console.log(navs[this.current]);
     navs[this.current].classList.toggle('active');
 
   }

@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import * as echarts from 'echarts';
 import * as $ from 'jquery';
+import {ConfigService} from '../services/config.service';
 
 @Component({
   selector: 'app-pay-sys',
@@ -8,8 +9,12 @@ import * as $ from 'jquery';
   styleUrls: ['./pay-sys.component.css']
 })
 export class PaySysComponent implements OnInit, AfterViewInit {
+  navs: any;
 
-  constructor() {
+  constructor(
+    private config: ConfigService
+  ) {
+    this.navs = this.config.getDefaultNavPills();
   }
 
   ngOnInit() {

@@ -22,14 +22,16 @@ import { PaySysComponent } from './pay-sys/pay-sys.component';
 import { UserCenterComponent } from './user-center/user-center.component';
 import { NavVerticalComponent } from './nav-vertical/nav-vertical.component';
 import { ListViwComponent } from './list-viw/list-viw.component';
-import { DoctorService } from './doctor.service';
+import { DoctorService } from './services/doctor.service';
 import { DoctorInfoComponent } from './doctor-info/doctor-info.component';
 import { AddDoctorComponent } from './add-doctor/add-doctor.component';
-import { EventService } from './event.service';
+import { EventService } from './services/event.service';
 import { GridviewComponent } from './gridview/gridview.component';
-import { GridviewService } from './gridview.service';
+import { GridviewService } from './services/gridview.service';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HelpComponent } from './help/help.component';
+import { DoctorWorkspaceComponent } from './doctor-workspace/doctor-workspace.component';
+import { ConfigService } from './services/config.service';
 
 declare var require: any;
 
@@ -39,6 +41,7 @@ require('../../node_modules/bootstrap/dist/js/bootstrap.js');
 require('../../node_modules/select2/dist/js/select2.js');
 require('../../node_modules/handsontable/dist/handsontable.full.js');
 require('../../node_modules/markdown/lib/markdown.js');
+
 const appRoutes: Routes = [
   { path: 'find', component: FindPasswordPageComponent },
   { path: 'tip', component: EmailTipComponent },
@@ -52,8 +55,11 @@ const appRoutes: Routes = [
   { path: 'pay', component: PaySysComponent },
   { path: 'about', component: AboutUsComponent },
   { path: 'help', component: HelpComponent },
+  { path: 'main', component: DoctorWorkspaceComponent },
   { path: '**', component: ErrorPageComponent }
 ];
+
+const interact = require('interactjs');
 
 @NgModule({
   declarations: [
@@ -80,7 +86,8 @@ const appRoutes: Routes = [
     AddDoctorComponent,
     GridviewComponent,
     AboutUsComponent,
-    HelpComponent
+    HelpComponent,
+    DoctorWorkspaceComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -89,7 +96,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
   ],
-  providers: [DoctorService, EventService, GridviewService],
+  providers: [DoctorService, EventService, GridviewService, ConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
