@@ -31,7 +31,6 @@
         "../node_modules/popper.js/dist/popper.js",
         "../node_modules/bootstrap/dist/js/bootstrap.js",
         "../node_modules/select2/dist/js/select2.js",
-        "../node_modules/handsontable/dist/handsontable.full.js",
         "../node_modules/markdown/lib/markdown.js"
       ],
       "environmentSource": "environments/environment.ts",
