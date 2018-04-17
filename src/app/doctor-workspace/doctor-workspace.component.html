@@ -1,0 +1,132 @@
+<div class="container-fluid div-container">
+  <app-navbar [current]="0" [navPills]="navs" [id]="'doctorWorkspaceNav'"></app-navbar>
+  <div class="container-fluid main-div">
+    <div class="row appoint-info">
+      <div class="col appoint-info-item hvr-underline-from-left hvr-icon-spin"
+           (click)="show()"
+           style="margin-left: 0;">
+        <p style="font-size: 16px"><i class="fas fa-list hvr-icon"></i> 当前
+          <label id="time"></label>
+        </p>
+        <p>已预约23人</p>
+        <p>待就诊20人</p>
+      </div>
+      <div class="col appoint-info-item hvr-underline-from-center hvr-icon-spin"
+           (click)="diagnose()">
+        <p style="font-size: 16px"><i class="fas fa-diagnoses hvr-icon"></i> 正在诊断
+        </p>
+        <p>#12 爱新觉罗溥仪</p>
+        <p>头晕眼花</p>
+      </div>
+      <div class="col appoint-info-item hvr-underline-from-right"
+           data-toggle="tooltip"
+           data-placement="bottom" title="点击处理下一位"></div>
+    </div>
+    <div class="row dw-collapse">
+      <div class="collapse multi-collapse dw-collapse-item" id="multiCollapseExample1">
+        <div class="container-fluid" style="overflow-y: scroll;">
+          <table class="table table-dark table-hover table-bordered">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="collapse dw-collapse-item" id="diagnose">
+        <div class="container card diagnose-card">
+          <div class="card-header">
+            <h4 class="text-center">诊断意见卡</h4>
+          </div>
+          <div class="card-body">
+            <div class="form-group input-item-short">
+              <input type="email" class="form-control" aria-describedby="usernameHelp" placeholder="输入姓名">
+              <small id=" usernameHelp" class="form-text text-muted">请输入汉字字符</small>
+            </div>
+            <div class="form-group input-item-short">
+              <input type="text" class="form-control" aria-describedby="phoneHelp" placeholder="输入电话号码">
+              <small id="phoneHelp" class="form-text text-muted">电话号码只支持国内固话、移动电话</small>
+            </div>
+            <div class="form-group input-item-short">
+              <input type="date" class="form-control" aria-describedby="phoneHelp" placeholder="出生年月日">
+              <small id="birthHelp" class="form-text text-muted">请选择出生年月日</small>
+            </div>
+            <div class="form-group input-item-short">
+              <input type="text" class="form-control" aria-describedby="idNumHelp" placeholder="输入身份证号">
+              <small id="idNumHelp" class="form-text text-muted">身份证由18位数字组成；如遇'叉'结尾的，请输入大写'X'</small>
+            </div>
+            <div class="form-group input-item-short">
+              <input type="text" class="form-control" aria-describedby="addrHelp" placeholder="输入联系地址">
+              <small id="addrHelp" class="form-text text-muted">最大50个字符</small>
+            </div>
+          </div>
+        </div>
+        <div class="container card emr-card">
+          <div class="emr-head">
+            <select class="select2">
+              <option selected>选择病历数据</option>
+              <optgroup label="空闲">
+                <option>sdaw</option>
+                <option>sdaw</option>
+                <option>sdaw</option>
+              </optgroup>
+              <optgroup label="在勤">
+                <option>dsadasdsa</option>
+                <option>dsadasdsa</option>
+                <option>dsadasdsa</option>
+                <option>dsadasdsa</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="card-body">
+            Checkboxes and radios
+            Default checkboxes and radios are improved upon with the help of .form-check, a single class for both input
+            types that improves the layout and behavior of their HTML elements. Checkboxes are for selecting one or
+            several options in a list, while radios are for selecting one option from many.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid appoint-msg">
+    </div>
+
+    <div class="container-chat">
+      <button type="button" class="btn-close btn btn-light btn-sm">
+        <i class="fas fa-times"></i>
+      </button>
+      <app-chat name="chats"></app-chat>
+    </div>
+    <div class="chat-btn">
+      <button type="button" class="btn btn-primary">信息 <span class="badge badge-danger">23</span></button>
+    </div>
+  </div>
+
+  <div class="container-fluid footer-container-dark">
+    <app-footer-light class="footer-dark footer-stacked"></app-footer-light>
+  </div>
+</div>

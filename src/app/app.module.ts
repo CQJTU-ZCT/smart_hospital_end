@@ -32,16 +32,17 @@ import {AboutUsComponent} from './about-us/about-us.component';
 import {HelpComponent} from './help/help.component';
 import {DoctorWorkspaceComponent} from './doctor-workspace/doctor-workspace.component';
 import {ConfigService} from './services/config.service';
-import {EmojiService} from "./emoji.service";
+import {EmojiService} from './services/emoji.service';
 import {EmojiComponent} from './emoji/emoji.component';
+import { ChatComponent } from './chat/chat.component';
 
 declare var require: any;
-
 require('../../node_modules/jquery/dist/jquery.js');
 require('../../node_modules/popper.js/dist/popper.js');
 require('../../node_modules/bootstrap/dist/js/bootstrap.js');
-require('../../node_modules/select2/dist/js/select2.js');
+// require('../../node_modules/select2/dist/js/select2.js');
 require('../../node_modules/markdown/lib/markdown.js');
+require('../../node_modules/slick-carousel/slick/slick.js');
 
 const appRoutes: Routes = [
   {path: 'find', component: FindPasswordPageComponent},
@@ -60,8 +61,6 @@ const appRoutes: Routes = [
   {path: 'emoji', component: EmojiComponent},
   {path: '**', component: ErrorPageComponent}
 ];
-
-const interact = require('interactjs');
 
 @NgModule({
   declarations: [
@@ -90,7 +89,8 @@ const interact = require('interactjs');
     AboutUsComponent,
     HelpComponent,
     DoctorWorkspaceComponent,
-    EmojiComponent
+    EmojiComponent,
+    ChatComponent
   ],
   imports: [
     RouterModule.forRoot(

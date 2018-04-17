@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     // init for bootstrap tooltip
-    $('[data-toggle="tooltip"]').tooltip();
+    ($('[data-toggle="tooltip"]') as any).tooltip();
     console.log(this.current);
     const navs = document.getElementById(this.id).children;
     console.log(navs[this.current]);

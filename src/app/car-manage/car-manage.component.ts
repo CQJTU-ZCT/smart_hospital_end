@@ -3,7 +3,8 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 import * as $ from 'jquery';
 import {timer} from 'rxjs/observable/timer';
 import {ConfigService} from '../services/config.service';
-
+import * as select2 from 'select2';
+var Bmap: any;
 @Component({
   selector: 'app-car-manage',
   templateUrl: './car-manage.component.html',
@@ -26,22 +27,22 @@ export class CarManageComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    $('.select2').select2({
+    ($('.select2') as any).select2({
       theme: 'bootstrap',
       placeholder: '选择救护车'
     });
     //  init baidu map
-    this.baiduMap = new BMap.Map('bdmap');
-    const point = new BMap.Point(116.404, 39.915);
+    this.baiduMap = new Bmap.Map('bdmap');
+    const point = new Bmap.Point(116.404, 39.915);
     this.baiduMap.centerAndZoom(point, 15);
-    const marker = new BMap.Marker(point);        // 创建标注
+    const marker = new Bmap.Marker(point);        // 创建标注
     this.baiduMap.addOverlay(marker);
     const opt = {
       width: 200,
       height: 100,
       title: '<label class="text-primary text-center">救护车实时位置</label>'
     };
-    const  infoWindow = new BMap.InfoWindow('位置', opt);
+    const  infoWindow = new Bmap.InfoWindow('位置', opt);
     this.baiduMap.openInfoWindow(infoWindow, point);
   }
 
