@@ -113,16 +113,19 @@
     </div>
 
     <div class="container-fluid appoint-msg">
+      <div class="header">
+        <h5>预约信息</h5>
+      </div>
     </div>
 
-    <div class="container-chat">
-      <button type="button" class="btn-close btn btn-light btn-sm">
+    <div class="container-chat dismiss">
+      <button type="button" class="btn-close btn btn-light btn-sm" (click)="showChat()">
         <i class="fas fa-times"></i>
       </button>
       <app-chat name="chats"></app-chat>
     </div>
     <div class="chat-btn">
-      <button type="button" class="btn btn-primary">信息 <span class="badge badge-danger">23</span></button>
+      <button type="button" class="btn btn-primary" (click)="showChat()">信息 <span class="badge badge-danger">23</span></button>
     </div>
   </div>
 

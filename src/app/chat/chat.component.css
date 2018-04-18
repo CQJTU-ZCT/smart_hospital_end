@@ -118,7 +118,7 @@
 
 .content-item {
   width: 100%;
-  height: 80px;
+  height: 120px;
 }
 
 .content-img {
@@ -130,6 +130,7 @@
 .content-msg {
   margin: 5px;
   border-radius: 5px;
+  width: 60%;
 }
 
 .item-left {
@@ -159,7 +160,7 @@
 .emoji-container {
   height: 200px;
   width: 100%;
-  background-color: #007bff;
+  background-color: white;
   position: absolute;
   bottom: 45px;
 }

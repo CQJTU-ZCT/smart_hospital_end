@@ -1,26 +1,46 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
-
-import * as $ from 'jquery';
-import {timer} from 'rxjs/observable/timer';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {ConfigService} from '../services/config.service';
-import * as select2 from 'select2';
-var Bmap: any;
+import * as $ from 'jquery';
+import * as popper from 'popper.js';
+import {MapTypeEnum} from 'angular2-baidu-map';
+
+declare var require: any;
+const select2 = require('select2');
+require('hammerjs');
 @Component({
   selector: 'app-car-manage',
   templateUrl: './car-manage.component.html',
   styleUrls: ['./car-manage.component.css']
 })
 export class CarManageComponent implements OnInit, AfterViewInit {
-  baiduMap: any;
+  option: any;
   navs: any;
+  makerLocation: any;
 
   constructor(
     private config: ConfigService
   ) {
     this.navs = this.config.getDefaultNavPills();
+    this.option = {
+      centerAndZoom: {
+        lng: 106.592354,
+        lat: 29.568996,
+        zoom: 15
+      },
+      enableKeyboard: true,
+      mapType: MapTypeEnum.BMAP_NORMAL_MAP,
+      enableScrollWheelZoom: true,
+
+    };
+    this.makerLocation = [
+      {
+        point: {
+          lng: 106.592354,
+          lat: 29.568996
+        }
+      }
+    ];
   }
-
-
 
 
   ngOnInit() {
@@ -32,25 +52,14 @@ export class CarManageComponent implements OnInit, AfterViewInit {
       placeholder: '选择救护车'
     });
     //  init baidu map
-    this.baiduMap = new Bmap.Map('bdmap');
-    const point = new Bmap.Point(116.404, 39.915);
-    this.baiduMap.centerAndZoom(point, 15);
-    const marker = new Bmap.Marker(point);        // 创建标注
-    this.baiduMap.addOverlay(marker);
-    const opt = {
-      width: 200,
-      height: 100,
-      title: '<label class="text-primary text-center">救护车实时位置</label>'
-    };
-    const  infoWindow = new Bmap.InfoWindow('位置', opt);
-    this.baiduMap.openInfoWindow(infoWindow, point);
+
   }
 
   change($event) {
     // const row = $event.target.parent.parent;
     // check
     if ($event.target.classList.contains('act-item-disabled')) {
-      console.log('changed')
+      console.log('changed');
       return;
     }
     const row = $event.target.parentNode.parentNode;
@@ -117,5 +126,18 @@ export class CarManageComponent implements OnInit, AfterViewInit {
     $('#manage-car').addClass('display');
     $('#car-monitor').removeClass('display');
     $('#car-monitor').addClass('dismiss');
+  }
+
+  onReady(map: any) {
+
+  }
+  public showWindow({ e, marker, map }: any): void {
+    map.openInfoWindow(
+      new window.BMap.InfoWindow('地址：浦东南路360号', {
+        offset: new window.BMap.Size(0, -30),
+        title: '新上海国际大厦'
+      }),
+      marker.getPosition()
+    );
   }
 }

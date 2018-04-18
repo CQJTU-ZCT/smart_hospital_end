@@ -1,5 +1,9 @@
 import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
 import * as $ from 'jquery';
+import * as popper from 'popper.js';
+declare var require: any;
+
+require('bootstrap');
 
 @Component({
   selector: 'app-navbar',

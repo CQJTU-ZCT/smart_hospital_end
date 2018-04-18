@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
-import {Observable} from "rxjs/Observable";
-import {Subscription} from "rxjs/Subscription";
-import {DoctorService} from "../services/doctor.service";
+import {Observable} from 'rxjs/Observable';
+import {Subscription} from 'rxjs/Subscription';
+import {DoctorService} from '../services/doctor.service';
 import {EventService} from '../services/event.service';
 import {Router} from '@angular/router';
 import {ConfigService} from '../services/config.service';
@@ -40,7 +40,8 @@ export class DoctorManageComponent implements OnInit, AfterViewInit {
     this.navs = this.config.getDefaultNavPills();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   ngAfterViewInit() {
     this.checkDoctorView = document.getElementById('checkDoctor');
@@ -83,7 +84,8 @@ export class DoctorManageComponent implements OnInit, AfterViewInit {
         console.log('err');
         break;
       }
-    };
+    }
+    ;
   }
 
 }

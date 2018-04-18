@@ -560,24 +560,24 @@ export class GridviewComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     const table = document.getElementById('table');
     const header = document.createElement('thead');
-    let tr = document.createElement('tr');
+    let trs = document.createElement('tr');
     for (var key in this.data[0]) {
-      var th = document.createElement('th');
+      const th = document.createElement('th');
       th.setAttribute('scope', 'col');
       th.innerText = key;
-      tr.appendChild(th);
+      trs.appendChild(th);
     }
-    header.appendChild(tr);
+    header.appendChild(trs);
     table.appendChild(header);
     const tbody = document.createElement('tbody');
     for (var d in this.data) {
-      var tr = document.createElement('tr');
+      const tra = document.createElement('tr');
       for (var key in this.data[d]) {
-        var td = document.createElement('td');
+        const td = document.createElement('td');
         td.innerText = this.data[d][key];
-        tr.appendChild(td);
+        tra.appendChild(td);
       }
-      tbody.appendChild(tr);
+      tbody.appendChild(tra);
     }
     table.appendChild(tbody);
     this.id = 1;
@@ -598,13 +598,13 @@ export class GridviewComponent implements OnInit, AfterViewInit {
       'dodors': 4
     };
     this.id += 1;
-    let tr = document.createElement('tr');
-    for (let key in newd) {
-      var td = document.createElement('td');
+    const trs = document.createElement('tr');
+    for (var key in newd) {
+      const td = document.createElement('td');
       td.innerText = newd[key];
-      tr.appendChild(td);
+      trs.appendChild(td);
     }
-    body.insertBefore(tr, body.children[0]);
+    body.insertBefore(trs, body.children[0]);
   }
 
-  }
+}

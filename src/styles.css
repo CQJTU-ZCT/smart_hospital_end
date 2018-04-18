@@ -103,3 +103,13 @@
   font-weight: 400;
   src: local('./assests/webfonts/materialdesign.woff2');
 }
+.emoji-item {
+  height: 30px;
+  width: 30px;
+}
+.emoji-item:hover {
+  background-color: #f4f4f4;
+}
+.clear {
+  clear: both;
+}

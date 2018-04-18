@@ -27,6 +27,9 @@
     </div>
 
     <div class="map-container" id="bdmap">
+      <baidu-map #map [options]="option" (ready)="onReady($event)">
+        <marker *ngFor="let maker of makerLocation" [point]="maker.point" (clicked)="showWindow($event)"></marker>
+      </baidu-map>
     </div>
   </div>
 

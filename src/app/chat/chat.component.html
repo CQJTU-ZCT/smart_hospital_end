@@ -1,4 +1,4 @@
-<div class="container-fluid chat-container">
+<div id="Test" class="container-fluid chat-container">
 
   <div class="friend-list">
     <div class="header">
@@ -25,256 +25,29 @@
       <h6>程飘</h6>
     </div>
     <div class="content" id="msg-content">
-      <div class="content-item">
-        <div class="content-img item-left">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
+      <div class="content-item" *ngFor="let record of chatRecord">
+        <div class="content-img" ngClass="{{record.type === 0 ? 'item-right' : 'item-left'}}">
+          <img src={{record.profile}}>
         </div>
-        <div class="content-msg item-left">
-          <small class="time item-left">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-right">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-right">
-          <small class="time item-right">ss</small>
-          <div class="msg">dasdwdwa</div>
+        <div class="content-msg" ngClass="{{record.type === 0 ? 'item-right' : 'item-left'}}">
+          <small class="time" ngClass="{{record.type === 0 ? 'item-right' : 'item-left'}}">{{record.time}}</small>
+          <p class="msg">{{record.content}}</p>
         </div>
       </div>
-      <div class="content-item">
-        <div class="content-img item-left">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-left">
-          <small class="time item-left">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-right">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-right">
-          <small class="time item-right">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-left">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-left">
-          <small class="time item-left">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-right">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-right">
-          <small class="time item-right">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-      <div class="content-img item-left">
-        <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-      </div>
-      <div class="content-msg item-left">
-        <small class="time item-left">ss</small>
-        <div class="msg">dasdwdwa</div>
-      </div>
-    </div>
-      <div class="content-item">
-        <div class="content-img item-right">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-right">
-          <small class="time item-right">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-      <div class="content-img item-left">
-        <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-      </div>
-      <div class="content-msg item-left">
-        <small class="time item-left">ss</small>
-        <div class="msg">dasdwdwa</div>
-      </div>
-    </div>
-      <div class="content-item">
-        <div class="content-img item-right">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-right">
-          <small class="time item-right">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-left">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-left">
-          <small class="time item-left">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-right">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-right">
-          <small class="time item-right">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-left">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-left">
-          <small class="time item-left">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-right">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-right">
-          <small class="time item-right">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-left">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-left">
-          <small class="time item-left">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-right">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-right">
-          <small class="time item-right">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-left">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-left">
-          <small class="time item-left">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-right">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-right">
-          <small class="time item-right">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-left">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-left">
-          <small class="time item-left">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-right">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-right">
-          <small class="time item-right">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-left">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-left">
-          <small class="time item-left">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-right">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-right">
-          <small class="time item-right">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-left">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-left">
-          <small class="time item-left">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-right">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-right">
-          <small class="time item-right">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-left">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-left">
-          <small class="time item-left">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-      <div class="content-item">
-        <div class="content-img item-right">
-          <img src="https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg">
-        </div>
-        <div class="content-msg item-right">
-          <small class="time item-right">ss</small>
-          <div class="msg">dasdwdwa</div>
-        </div>
-      </div>
-
-
     </div>
     <div class="control-bar">
       <div class="btn-emoji">
-        <button type="button" class="btn btn-primary btn-ctrl"><i class="far fa-smile"></i></button>
+        <button type="button" class="btn btn-primary btn-ctrl" (click)="emojiCtrl()"><i class="far fa-smile"></i></button>
       </div>
       <div class="ctr-input">
-        <textarea type="text" class="msg-input"></textarea>
+        <textarea type="text" class="msg-input" [(ngModel)]="msg"></textarea>
       </div>
       <div class="btn-send">
-        <button type="button" class="btn btn-primary btn-ctrl"><i class="fab fa-telegram-plane"></i></button>
+        <button type="button" class="btn btn-primary btn-ctrl" (click)="sendMsg()"><i class="fab fa-telegram-plane"></i></button>
       </div>
     </div>
-    <div class="emoji-container">
-      <app-emoji></app-emoji>
+    <div class="emoji-container dismiss">
+      <app-emoji [col]="5" [row]="4" *ngIf="emojiShow"></app-emoji>
     </div>
   </div>
 

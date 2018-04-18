@@ -1,6 +1,8 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import * as $ from 'jquery';
 import {EventService} from '../services/event.service';
+import * as interact from 'interactjs';
+import * as format from 'date-fns/format';
 
 @Component({
   selector: 'app-doctor-workspace',
@@ -33,27 +35,27 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    $('.select2').select2({
+    ($('.select2') as any).select2({
       theme: 'bootstrap',
       placeholder: '选择救护车'
     });
-    const interact = require('interactjs');
+    const opt = {
+      edges: {
+        left: true,
+        top: true
+      },
+      restrictEdges: {
+        outer: 'parent',
+        endOnly: true,
+      },
+      restrictSize: {
+        min: {width: 470, height: 260},
+      },
+      inertia: true
+    };
     interact('.container-chat')
-      .resizable({
-        edges: {
-          left: true,
-          top: true
-        },
-        restrictEdges: {
-          outer: 'parent',
-          endOnly: true,
-        },
-        restrictSize: {
-          min: {width: 470, height: 260},
-        },
-        inertia: true
-      })
-      .on('resizemove', event => {
+      .resizable(opt)
+      .on('resizemove', (event: any) => {
         const target = event.target;
         let x = (parseFloat(target.getAttribute('data-x')) || 0);
         let y = (parseFloat(target.getAttribute('data-y')) || 0);
@@ -75,26 +77,29 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
   }
 
   show() {
-    $('.collapse').collapse('hide');
-    if ($('#multiCollapseExample1').collapse('toggle')) {
-      $('#multiCollapseExample1').collapse('hide');
+    ($('.collapse') as any).collapse('hide');
+    if (($('#multiCollapseExample1') as any).collapse('toggle')) {
+      ($('#multiCollapseExample1') as any).collapse('hide');
     } else {
-      $('#multiCollapseExample1').collapse();
+      ($('#multiCollapseExample1') as any).collapse();
     }
   }
 
   getTime() {
-    const format = require('date-fns/format');
     this.time = format(new Date(), 'YYYY年MM月DD日 HH时mm分ss秒');
     $('#time').text(this.time);
   }
 
   diagnose() {
-    $('.collapse').collapse('hide');
-    if ($('#diagnose').collapse('toggle')) {
-      $('#diagnose').collapse('hide');
+    ($('.collapse') as any).collapse('hide');
+    if (($('#diagnose') as any).collapse('toggle')) {
+      ($('#diagnose') as any).collapse('hide');
     } else {
-      $('#diagnose').collapse();
+      ($('#diagnose') as any).collapse();
     }
+  }
+  showChat() {
+    $('.container-chat').slideToggle('slow', () => {
+    });
   }
 }

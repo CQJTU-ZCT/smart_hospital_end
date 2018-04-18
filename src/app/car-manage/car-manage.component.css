@@ -90,3 +90,7 @@
 .car-row:hover {
   background-color: #eeeeee;
 }
+baidu-map {
+  width: 100%;
+  height: 100%;
+}

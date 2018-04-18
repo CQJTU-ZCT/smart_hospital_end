@@ -1,5 +1,7 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
-import * as $ from "jquery";
+import * as $ from 'jquery';
+declare var require: any;
+
 
 @Component({
   selector: 'app-help',
@@ -8,14 +10,15 @@ import * as $ from "jquery";
 })
 export class HelpComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
   ngAfterViewInit() {
     $.get('../assets/imgs/test1.md', function (data) {
-      const markdown = require( "markdown" ).markdown;
+      const markdown = require('markdown').markdown;
       const help = document.getElementById('help');
       help.innerHTML = markdown.toHTML(data);
     });

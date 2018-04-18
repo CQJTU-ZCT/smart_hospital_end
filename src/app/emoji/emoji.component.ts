@@ -3,6 +3,8 @@ import {EventService} from '../services/event.service';
 import {EmojiService} from '../services/emoji.service';
 
 import * as $ from 'jquery';
+declare var require: any;
+require('slick-carousel');
 
 @Component({
   selector: 'app-emoji',
@@ -36,7 +38,7 @@ export class EmojiComponent implements OnInit, AfterViewInit {
     for (let i = 0; i < this.pages - 1; i++) {
       let div;
       div = $('<div></div>');
-      const table = $('<table class="table table-responsive table-bordered">' +
+      const table = $('<table class="table table-bordered">' +
                     '</table>');
       const tbody = $('<tbody></tbody>');
       for (let j = 0; j < this.row; j++) {
@@ -58,9 +60,8 @@ export class EmojiComponent implements OnInit, AfterViewInit {
       div.append(table);
       page.append(div);
     }
-    page.slick({
-      arrows: false,
-      dots: true
+    (page as any).slick({
+      arrows: true,
     });
   }
 
@@ -71,7 +72,10 @@ export class EmojiComponent implements OnInit, AfterViewInit {
   emojiClickHandler() {
     const that = this;
     return function () {
-      that.event.publish($(this).text());
+      that.event.publish({
+        type: 'emoji',
+        content: $(this).text()
+      });
     };
   }
 

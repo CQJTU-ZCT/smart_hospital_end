@@ -1,6 +1,8 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import * as $ from 'jquery';
 
+declare var require: any;
+
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
@@ -15,10 +17,9 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-
     $.get('../assets/imgs/test.md', function (data) {
-      const markdown = require('markdown').markdown;
       const preview = document.getElementById('preview');
+      const markdown = require('markdown').markdown;
       preview.innerHTML = markdown.toHTML(data);
     });
   }
