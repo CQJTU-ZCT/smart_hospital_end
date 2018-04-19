@@ -18,14 +18,19 @@
         <p>#12 爱新觉罗溥仪</p>
         <p>头晕眼花</p>
       </div>
-      <div class="col appoint-info-item hvr-underline-from-right"
+      <div class="col appoint-info-item hvr-underline-from-right hvr-icon-spin"
            data-toggle="tooltip"
-           data-placement="bottom" title="点击处理下一位"></div>
+           data-placement="bottom" title="点击处理下一位">
+        <p style="font-size: 16px"><i class="fas fa-list hvr-icon"></i> 下一位
+        </p>
+        <p>程飘</p>
+        <p>14：00 - 14：30</p>
+      </div>
     </div>
-    <div class="row dw-collapse">
-      <div class="collapse multi-collapse dw-collapse-item" id="multiCollapseExample1">
+    <div>
+      <div class="dw-collapse-item dismiss" id="appointed-table">
         <div class="container-fluid" style="overflow-y: scroll;">
-          <table class="table table-dark table-hover table-bordered">
+          <table class="table table-hover table-bordered appoint-table">
             <thead>
             <tr>
               <th scope="col">#</th>
@@ -57,7 +62,7 @@
           </table>
         </div>
       </div>
-      <div class="collapse dw-collapse-item" id="diagnose">
+      <div class="dw-collapse-item dismiss" id="diagnose">
         <div class="container card diagnose-card">
           <div class="card-header">
             <h4 class="text-center">诊断意见卡</h4>
@@ -116,6 +121,50 @@
       <div class="header">
         <h5>预约信息</h5>
       </div>
+      <div class="container-fluid  table-container">
+        <table class="table table-hover table-bordered appoint-table">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">姓名</th>
+            <th scope="col">时间</th>
+            <th scope="col">类别</th>
+            <th scope="col">处理</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+            <td>
+              <div class="act-item fas fa-check" data-toggle="tooltip"
+                   data-placement="bottom" title="同意"
+                   (click)="commitBtn($event)">
+              </div>
+              <div class="act-item fas fa-times" data-toggle="tooltip"
+                   data-placement="bottom" title="拒绝">
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <div class="container-chat dismiss">
@@ -125,7 +174,8 @@
       <app-chat name="chats"></app-chat>
     </div>
     <div class="chat-btn">
-      <button type="button" class="btn btn-primary" (click)="showChat()">信息 <span class="badge badge-danger">23</span></button>
+      <button type="button" class="btn btn-primary" (click)="showChat()">信息 <span class="badge badge-danger">23</span>
+      </button>
     </div>
   </div>
 

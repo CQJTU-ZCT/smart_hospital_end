@@ -77,12 +77,8 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
   }
 
   show() {
-    ($('.collapse') as any).collapse('hide');
-    if (($('#multiCollapseExample1') as any).collapse('toggle')) {
-      ($('#multiCollapseExample1') as any).collapse('hide');
-    } else {
-      ($('#multiCollapseExample1') as any).collapse();
-    }
+    $('#appointed-table').slideToggle('slow', () => {
+    });
   }
 
   getTime() {
@@ -91,15 +87,15 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
   }
 
   diagnose() {
-    ($('.collapse') as any).collapse('hide');
-    if (($('#diagnose') as any).collapse('toggle')) {
-      ($('#diagnose') as any).collapse('hide');
-    } else {
-      ($('#diagnose') as any).collapse();
-    }
+    $('#diagnose').slideToggle('slow', () => {
+    });
   }
   showChat() {
     $('.container-chat').slideToggle('slow', () => {
     });
+  }
+
+  commitBtn($event) {
+    console.log('sds');
   }
 }

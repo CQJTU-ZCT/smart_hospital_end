@@ -14,7 +14,7 @@
             <span class="badge badge-primary">23</span>
           </div>
           <div class="last-msg">
-            <small>你好，请问你在吗</small>
+            <p>你好，请问你在吗</p>
           </div>
         </div>
       </div>
@@ -31,7 +31,9 @@
         </div>
         <div class="content-msg" ngClass="{{record.type === 0 ? 'item-right' : 'item-left'}}">
           <small class="time" ngClass="{{record.type === 0 ? 'item-right' : 'item-left'}}">{{record.time}}</small>
-          <p class="msg">{{record.content}}</p>
+          <div class="container msg">
+            <p>{{record.content}}</p>
+          </div>
         </div>
       </div>
     </div>

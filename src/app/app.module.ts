@@ -53,6 +53,7 @@ const appRoutes: Routes = [
   {path: 'help', component: HelpComponent},
   {path: 'main', component: DoctorWorkspaceComponent},
   {path: 'emoji', component: EmojiComponent},
+  {path: '', component: LoginPageComponent},
   {path: '**', component: ErrorPageComponent}
 ];
 
