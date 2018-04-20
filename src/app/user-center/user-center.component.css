@@ -1,0 +1,30 @@
+@import "~igniteui-angular/styles/igniteui-angular.css";
+.carousel-container {
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  overflow: hidden;
+}
+.carousel-h-item {
+  width: 100%;
+  height: 180px;
+}
+img {
+  height: 200px;
+}
+.info-card {
+  width: 60%;
+  margin-left: 20%;
+}
+.key {
+  font-weight: bold;
+  font-size: 10px;
+}
+.value {
+  margin-left: 10px;
+  font-size: 14px;
+}
+.info-content {
+  height: 250px;
+  overflow-y: scroll;
+}

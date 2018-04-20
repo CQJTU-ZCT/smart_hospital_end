@@ -1,5 +1,5 @@
 <div class="container-fluid div-container">
-  <app-navbar [current]="0" [navPills]="navs" [id]="'doctorWorkspaceNav'"></app-navbar>
+  <app-navbar [current]="0" [navPills]="navs" [id]="'doctorWorkspaceNav'" type="1"></app-navbar>
   <div class="container-fluid main-div">
     <div class="row appoint-info">
       <div class="col appoint-info-item hvr-underline-from-left hvr-icon-spin"
@@ -125,39 +125,24 @@
         <table class="table table-hover table-bordered appoint-table">
           <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">姓名</th>
-            <th scope="col">时间</th>
-            <th scope="col">类别</th>
-            <th scope="col">处理</th>
+            <th *ngFor="let item of appointData.head" scope="col">{{item}}</th>
           </tr>
           </thead>
           <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>
-              <div class="act-item fas fa-check" data-toggle="tooltip"
+          <tr *ngFor="let data of appointData.data">
+            <td>{{data.name}}</td>
+            <td>{{data.date}}</td>
+            <td>{{data.time}}</td>
+            <td>{{data.type}}</td>
+            <td>{{data.status}}</td>
+            <td id="{{data.id}}">
+              <div class="fas fa-check" data-toggle="tooltip"
                    data-placement="bottom" title="同意"
+                   ngClass="{{data.action == 0 ? 'act-item-disabled' : 'act-item'}}"
                    (click)="commitBtn($event)">
               </div>
-              <div class="act-item fas fa-times" data-toggle="tooltip"
+              <div class="fas fa-times" data-toggle="tooltip"
+                   ngClass="{{data.action == 0 ? 'act-item-disabled' : 'act-item'}}"
                    data-placement="bottom" title="拒绝">
               </div>
             </td>

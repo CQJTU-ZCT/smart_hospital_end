@@ -36,6 +36,8 @@ import {EmojiService} from './services/emoji.service';
 import {EmojiComponent} from './emoji/emoji.component';
 import {ChatComponent} from './chat/chat.component';
 import {BaiduMapModule} from 'angular2-baidu-map';
+import { ConfigPageComponent } from './config-page/config-page.component';
+import {IgxAvatarModule, IgxCardModule, IgxListModule} from 'igniteui-angular/main';
 
 
 const appRoutes: Routes = [
@@ -53,8 +55,11 @@ const appRoutes: Routes = [
   {path: 'help', component: HelpComponent},
   {path: 'main', component: DoctorWorkspaceComponent},
   {path: 'emoji', component: EmojiComponent},
+  {path: '404', component: ErrorPageComponent},
+  {path: 'user/:type', component: UserCenterComponent},
   {path: '', component: LoginPageComponent},
-  {path: '**', component: ErrorPageComponent}
+  {path: 'config', component: ConfigPageComponent},
+  {path: '**', redirectTo: '/404'}
 ];
 
 @NgModule({
@@ -85,7 +90,8 @@ const appRoutes: Routes = [
     HelpComponent,
     DoctorWorkspaceComponent,
     EmojiComponent,
-    ChatComponent
+    ChatComponent,
+    ConfigPageComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -96,6 +102,9 @@ const appRoutes: Routes = [
     }),
     BrowserModule,
     FormsModule,
+    IgxCardModule,
+    IgxAvatarModule,
+    IgxListModule
   ],
   providers: [DoctorService, EventService, GridviewService, ConfigService, EmojiService],
   bootstrap: [AppComponent]

@@ -20,6 +20,7 @@ export class DoctorManageComponent implements OnInit, AfterViewInit {
   checkDoctorView: any;
   addDoctorView: any;
   navs: any;
+  listItem: any;
 
 
   constructor(
@@ -38,6 +39,8 @@ export class DoctorManageComponent implements OnInit, AfterViewInit {
       this.listItemClickListener(value);
     });
     this.navs = this.config.getDefaultNavPills();
+
+    this.listItem = ['管理医生', '添加医生'];
   }
 
   ngOnInit() {

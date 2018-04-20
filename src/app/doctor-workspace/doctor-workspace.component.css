@@ -144,3 +144,16 @@
   background-color: #1E90FF;
   border: 1px solid salmon;
 }
+
+.act-item-disabled {
+  height: 25px;
+  width: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 12px;
+  float: left;
+  margin-left: 5px;
+  background-color: #ccc;
+  color: #999;
+}

@@ -1,8 +1,5 @@
-<ul id="navList" class="nav nav-pills flex-column">
-  <li class="nav-item">
-    <a listId="0" class="nav-link active" href="#" (click)="publish($event)">查看医生</a>
-  </li>
-  <li class="nav-item">
-    <a listId="1" class="nav-link" href="#" (click)="publish($event)">添加医生</a>
+<ul id="{{id}}" class="nav nav-pills flex-column">
+  <li class="nav-item" *ngFor="let item of items; index as i">
+    <a target="{{i}}" class="nav-link" href="#" ngClass="{{i === 0 ? 'active' : ''}}" (click)="publish($event)">{{item}}</a>
   </li>
 </ul>

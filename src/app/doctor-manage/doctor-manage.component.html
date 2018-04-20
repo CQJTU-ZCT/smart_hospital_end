@@ -1,8 +1,8 @@
 <div class="container-fluid div-container">
-  <app-navbar [current]="1" [navPills]="navs" [id]="'doctorManageNav'"></app-navbar>
+  <app-navbar [current]="1" [navPills]="navs" [id]="'doctorManageNav'" [type]="0"></app-navbar>
   <div class="container-fluid main-div">
     <div class="nav-left">
-      <app-nav-vertical></app-nav-vertical>
+      <app-nav-vertical [id]="'dmNavlist'" [items]="listItem"></app-nav-vertical>
     </div>
     <div class="content-right">
       <div id="checkDoctor" class="display animated fadeIn">

@@ -13,6 +13,7 @@ import * as format from 'date-fns/format';
 export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
   navs: any;
   time: string;
+  appointData: any;
 
   constructor(
     private eventService: EventService
@@ -28,6 +29,93 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
       }
     ];
     window.setInterval(this.getTime, 1000);
+
+    this.appointData = {
+      head: ['姓名', '日期', '时间', '类型', '状态', '操作'],
+      data: [
+        {
+          name: '程飘',
+          date: '2018-04-20',
+          time: '14:00-14:30',
+          type: '预约就诊',
+          status: '未处理',
+          action: 1,
+          id: 11321
+        },
+        {
+          name: '程飘',
+          date: '2018-04-20',
+          time: '14:00-14:30',
+          type: '预约就诊',
+          status: '未处理',
+          action: 0,
+          id: 13111
+        },
+        {
+          name: '程飘',
+          date: '2018-04-20',
+          time: '14:00-14:30',
+          type: '预约就诊',
+          status: '未处理',
+          action: 1,
+          id: 1231
+        },
+        {
+          name: '程飘',
+          date: '2018-04-20',
+          time: '14:00-14:30',
+          type: '预约就诊',
+          status: '未处理',
+          action: 0,
+          id: 230012
+        },
+        {
+          name: '程飘',
+          date: '2018-04-20',
+          time: '14:00-14:30',
+          type: '预约就诊',
+          status: '未处理',
+          action: 0,
+          id: 301241
+        },
+        {
+          name: '程飘',
+          date: '2018-04-20',
+          time: '14:00-14:30',
+          type: '预约就诊',
+          status: '未处理',
+          action: 0,
+          id: 230012
+        },
+        {
+          name: '程飘',
+          date: '2018-04-20',
+          time: '14:00-14:30',
+          type: '预约就诊',
+          status: '未处理',
+          action: 0,
+          id: 99012
+        },
+        {
+          name: '程飘',
+          date: '2018-04-20',
+          time: '14:00-14:30',
+          type: '预约就诊',
+          status: '未处理',
+          action: 0,
+          id: 21002
+        },
+        {
+          name: '程飘',
+          date: '2018-04-20',
+          time: '14:00-14:30',
+          type: '预约就诊',
+          status: '未处理',
+          action: 0,
+          id: 789123
+        }
+      ]
+    };
   }
 
 
@@ -62,6 +150,7 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
         // update the element's style
         target.style.width = event.rect.width + 'px';
         target.style.height = event.rect.height + 'px';
+        // emit a resize event
         this.eventService.publish({
           type: 'resize',
           width: target.style.width,
@@ -96,6 +185,6 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
   }
 
   commitBtn($event) {
-    console.log('sds');
+    console.log($event.target.parentNode.getAttribute('id'));
   }
 }

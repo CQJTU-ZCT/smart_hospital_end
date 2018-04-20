@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {EventService} from '../services/event.service';
 
 @Component({
@@ -8,6 +8,11 @@ import {EventService} from '../services/event.service';
 })
 export class NavVerticalComponent implements OnInit {
 
+  @Input()
+  items: any;
+
+  @Input()
+  id: string;
   constructor(
     private eventService: EventService
   ) { }
@@ -19,15 +24,16 @@ export class NavVerticalComponent implements OnInit {
     if ($event.target.classList.contains('active')) {
       return false;
     }
-    const navList = document.getElementById('navList');
-    for (var index = 0; index < navList.children.length; index++) {
-      var aElement = navList.children[index].children[0];
+    console.log(this.id);
+    const navList = document.getElementById(this.id);
+    for (let index = 0; index < navList.children.length; index++) {
+      const aElement = navList.children[index].children[0];
       if (aElement.classList.contains('active')) {
         aElement.classList.remove('active');
       }
     }
     $event.target.classList.toggle('active');
-    this.eventService.publish($event.target.attributes['listid']['value']);
+    this.eventService.publish($event.target.attributes['target']['value']);
     return false;
   }
 

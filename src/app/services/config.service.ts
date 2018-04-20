@@ -25,10 +25,13 @@ export class ConfigService {
         link: '/pay'
       },
       {
-        name: ' 个人中心',
-        link: '#'
+        name: '系统配置',
+        link: '/config'
       },
-    ];
+      {
+        name: ' 个人中心',
+        link: '/user'
+      }];
     return navPills;
   }
 

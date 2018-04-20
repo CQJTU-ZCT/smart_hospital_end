@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
 import * as $ from 'jquery';
 import * as popper from 'popper.js';
+import {Router, RouterModule} from '@angular/router';
 declare var require: any;
 
 require('bootstrap');
@@ -20,7 +21,12 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   @Input()
   id: any;
 
-  constructor() {
+  @Input()
+  type: any;
+
+  constructor(
+    private router: Router
+  ) {
   }
 
   ngOnInit() {
@@ -34,6 +40,14 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     console.log(navs[this.current]);
     navs[this.current].classList.toggle('active');
 
+  }
+
+  navigate($event) {
+    const s = $event.target.innerText;
+    if (s === '个人中心') {
+      this.router.navigate(['/user', this.type]);
+      return false;
+    }
   }
 
 }
