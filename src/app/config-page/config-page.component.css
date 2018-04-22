@@ -1,3 +1,46 @@
+@import "~igniteui-angular/styles/igniteui-angular.css";
 .nav-left {
   width: 15%;
+  height: calc(100% - 100px);
+  float: left;
+  position: absolute;
+}
+.nav-left app-nav-vertical {
+  width: 100%;
+}
+app-nav-vertical a {
+  border-radius: 0;
+}
+.content-right {
+  float: left;
+  position: absolute;
+  margin-left: 15%;
+  width: 85%;
+  height: calc(100% - 100px);
+}
+.carousel-info {
+  width: 80%;
+  margin-left: 10%;
+  padding: 0;
+}
+.carousel-info-item {
+  width: 200px;
+  height: 200px;
+}
+.carousel-info-item-img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+.carousel-config {
+  margin: 10px;
+}
+.igx-card-title {
+  height: 20px;
+  padding-left: 10px;
+  font-size: 14px;
+  color: #454545;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
 }
