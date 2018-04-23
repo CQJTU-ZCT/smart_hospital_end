@@ -7,40 +7,102 @@
 
     <div class="content-right">
 
-      <div class="media-info">
+      <div class="media-info display animated fadeIn">
         <div class="igx-card carousel-config">
           <div class="igx-card-title">
             <p>宣传图片配置</p>
           </div>
           <div class="carousel-info">
             <div class="carousel-info-item">
+              <button type="button" class="button btn-light btn-sm close-btn"
+                      data-toggle="tooltip"
+                      data-placement="bottom" title="删除该图片">
+                <i class="fas fa-times"></i>
+              </button>
               <img src="http://img5.imgtn.bdimg.com/it/u=3014666127,3555732942&fm=27&gp=0.jpg"
                    class="carousel-info-item-img">
             </div>
             <div class="carousel-info-item">
+              <button type="button" class="button btn-light btn-sm close-btn"
+                      data-toggle="tooltip"
+                      data-placement="bottom" title="删除该图片">
+                <i class="fas fa-times"></i>
+              </button>
               <img src="http://img5.imgtn.bdimg.com/it/u=3014666127,3555732942&fm=27&gp=0.jpg"
                    class="carousel-info-item-img">
             </div>
             <div class="carousel-info-item">
+              <button type="button" class="button btn-light btn-sm close-btn"
+                      data-toggle="tooltip"
+                      data-placement="bottom" title="删除该图片">
+                <i class="fas fa-times"></i>
+              </button>
               <img src="http://img5.imgtn.bdimg.com/it/u=3014666127,3555732942&fm=27&gp=0.jpg"
                    class="carousel-info-item-img">
             </div>
             <div class="carousel-info-item">
+              <button type="button" class="button btn-light btn-sm close-btn"
+                      data-toggle="tooltip"
+                      data-placement="bottom" title="删除该图片">
+                <i class="fas fa-times"></i>
+              </button>
               <img src="http://img5.imgtn.bdimg.com/it/u=3014666127,3555732942&fm=27&gp=0.jpg"
                    class="carousel-info-item-img">
             </div>
             <div class="carousel-info-item">
+              <button type="button" class="button btn-light btn-sm close-btn"
+                      data-toggle="tooltip"
+                      data-placement="bottom" title="删除该图片">
+                <i class="fas fa-times"></i>
+              </button>
               <img src="http://img5.imgtn.bdimg.com/it/u=3014666127,3555732942&fm=27&gp=0.jpg"
                    class="carousel-info-item-img">
             </div>
             <div class="carousel-info-item">
+              <button type="button" class="button btn-light btn-sm close-btn"
+                      data-toggle="tooltip"
+                      data-placement="bottom" title="删除该图片">
+                <i class="fas fa-times"></i>
+              </button>
               <img src="http://img5.imgtn.bdimg.com/it/u=3014666127,3555732942&fm=27&gp=0.jpg"
                    class="carousel-info-item-img">
+            </div>
+            <div class="carousel-info-item add-img igx-card hvr-icon-spin"
+                 data-toggle="tooltip"
+                 data-placement="bottom" title="添加新图片"
+                 (click)="openFilePicker()">
+              <i class="fas fa-plus hvr-icon"></i>
+              <p>图片应为1024x200px，大小小于200px</p>
+              <input id="filePicker" class="dismiss" type="file"/>
             </div>
           </div>
         </div>
+        <div class="igx-card profile-config">
+          <div class="igx-card-title">
+            <p>医院简介</p>
+          </div>
+          <div class="markdown-area">
+            <textarea id="profileInput" type="text" class="form-control profile-input"
+                   (input)="mdChange()"></textarea>
+            <div class="markdown-preview">
+              <button type="button" class="btn btn-light btn-sm hvr-icon-spin full-screen-btn"
+                      data-toggle="tooltip"
+                      data-placement="bottom" title="进入全屏预览模式"
+                      (click)="fullScreenPreview()">
+                <i class="fas fa-compress hvr-icon"></i>
+              </button>
+              <div class="markdown-content">
 
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-light btn-sm markdown-btn" (click)="markdown()">
+            <img src="../../assets/imgs/markdown.png">
+            使用Markdown进行编辑
+          </button>
+        </div>
       </div>
+
 
     </div>
   </div>
