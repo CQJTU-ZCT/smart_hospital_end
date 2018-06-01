@@ -34,7 +34,7 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
       head: ['姓名', '日期', '时间', '类型', '状态', '操作'],
       data: [
         {
-          name: '程飘',
+          name: '箫音',
           date: '2018-04-20',
           time: '14:00-14:30',
           type: '预约就诊',
@@ -43,7 +43,7 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
           id: 11321
         },
         {
-          name: '程飘',
+          name: '王海',
           date: '2018-04-20',
           time: '14:00-14:30',
           type: '预约就诊',
@@ -52,7 +52,7 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
           id: 13111
         },
         {
-          name: '程飘',
+          name: '王稼祥',
           date: '2018-04-20',
           time: '14:00-14:30',
           type: '预约就诊',
@@ -61,7 +61,7 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
           id: 1231
         },
         {
-          name: '程飘',
+          name: '郑德福',
           date: '2018-04-20',
           time: '14:00-14:30',
           type: '预约就诊',
@@ -70,7 +70,7 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
           id: 230012
         },
         {
-          name: '程飘',
+          name: '张天美',
           date: '2018-04-20',
           time: '14:00-14:30',
           type: '预约就诊',
@@ -79,7 +79,7 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
           id: 301241
         },
         {
-          name: '程飘',
+          name: '汤家骅',
           date: '2018-04-20',
           time: '14:00-14:30',
           type: '预约就诊',
@@ -88,7 +88,7 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
           id: 230012
         },
         {
-          name: '程飘',
+          name: '王国富',
           date: '2018-04-20',
           time: '14:00-14:30',
           type: '预约就诊',
@@ -97,7 +97,7 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
           id: 99012
         },
         {
-          name: '程飘',
+          name: '李佳美',
           date: '2018-04-20',
           time: '14:00-14:30',
           type: '预约就诊',
@@ -106,7 +106,7 @@ export class DoctorWorkspaceComponent implements OnInit, AfterViewInit {
           id: 21002
         },
         {
-          name: '程飘',
+          name: '张天爱',
           date: '2018-04-20',
           time: '14:00-14:30',
           type: '预约就诊',

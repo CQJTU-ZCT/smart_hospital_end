@@ -21,534 +21,44 @@ export class GridviewComponent implements OnInit, AfterViewInit {
     this.id = 1;
     this.data = [
       {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
+        '订单编号': 'AD2018060114232099823',
+        '类型': '挂号',
+        '金额': 45.00,
+        '处理人': '李建民',
+        '处理时间': '2018-06-01 14:30:23',
+        '创建时间': '2018-06-01 14:23:20',
+        '支付状态': '已支付',
+        '支付方式': '微信支付'
       },
       {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
+        '订单编号': 'AD2018060114232097824',
+        '类型': '取药',
+        '金额': 314.56,
+        '处理人': '张开发',
+        '处理时间': '2018-06-01 14:31:43',
+        '创建时间': '2018-06-01 14:23:22',
+        '支付状态': '未支付',
+        '支付方式': ''
       },
       {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
+        '订单编号': 'AD2018060114232497821',
+        '类型': '住院',
+        '金额': 2000.00,
+        '处理人': '周生生',
+        '处理时间': '2018-06-01 14:30:23',
+        '创建时间': '2018-06-01 14:24:20',
+        '支付状态': '已支付',
+        '支付方式': '微信支付'
       },
       {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
-      },
-      {
-        'model': 'Sentra231455334661123',
-        'doors': 4,
-        'mode2l': 'Sentraaxs2314asaw',
-        'doo3rs': 4,
-        'mo1del': 'Sentra',
-        'doo4rs': 4,
-        'mosdel': 'Sentra',
-        'dodors': 4
+        '订单编号': 'AD2018060114232099823',
+        '类型': '手术',
+        '金额': 9100.20,
+        '处理人': '王贤勇',
+        '处理时间': '2018-06-01 14:30:23',
+        '创建时间': '2018-06-01 14:27:20',
+        '支付状态': '已支付',
+        '支付方式': '支付宝'
       }
     ];
   }
@@ -588,14 +98,14 @@ export class GridviewComponent implements OnInit, AfterViewInit {
     const body = $('#table').children()[1];
     console.log(body);
     const newd = {
-      'model': 'Sentra231455334661123',
-      'doors': this.id,
-      'mode2l': 'Sentraaxs2314asaw',
-      'doo3rs': 4,
-      'mo1del': 'Sentra',
-      'doo4rs': 4,
-      'mosdel': 'Sentra',
-      'dodors': 4
+      '订单编号': 'AD2018060114232099823',
+      '类型': '挂号',
+      '金额': 45.00,
+      '处理人': '程飘',
+      '处理时间': '2018-06-01 14:30:23',
+      '创建时间': '2018-06-01 14:23:20',
+      '支付状态': '已支付',
+      '支付方式': '微信支付'
     };
     this.id += 1;
     const trs = document.createElement('tr');

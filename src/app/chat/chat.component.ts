@@ -35,42 +35,19 @@ export class ChatComponent implements OnInit, AfterViewInit {
       {
         type: 0,
         profile: 'https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg',
-        content: '😛,😟😦sds测试',
+        content: '你好',
         time: '2014/09/11 12:02:23'
       },
       {
         type: 1,
         profile: 'https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg',
-        content: '😛,😟😦sds测试',
-        time: '2014/09/11 12:02:23'
-      },
-      {
-        type: 1,
-        profile: 'https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg',
-        content: '😛,😟😦sds测试',
-        time: '2014/09/11 12:02:23'
-      }, {
-        type: 0,
-        profile: 'https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg',
-        content: '😛,😟😦sds测试',
-        time: '2014/09/11 12:02:23'
-      },
-      {
-        type: 0,
-        profile: 'https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg',
-        content: '😛,😟😦sds测试',
-        time: '2014/09/11 12:02:23'
-      },
-      {
-        type: 1,
-        profile: 'https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg',
-        content: '😛,😟😦sds测试',
+        content: '你好',
         time: '2014/09/11 12:02:23'
       }
       , {
         type: 0,
         profile: 'https://learn.jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg',
-        content: '😛,😟😦sds测试',
+        content: '你说',
         time: '2014/09/11 12:02:23'
       }
     ];

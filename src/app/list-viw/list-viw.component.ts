@@ -1,5 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { DoctorService } from "../services/doctor.service";
+import {Component, OnInit} from '@angular/core';
+import {DoctorService} from '../services/doctor.service';
 
 @Component({
   selector: 'app-list-viw',
@@ -10,7 +10,8 @@ export class ListViwComponent implements OnInit {
 
   constructor(
     private doctorService: DoctorService
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
   }
